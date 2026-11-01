@@ -501,7 +501,7 @@ button:disabled{opacity:.4;cursor:not-allowed}
       }).then(function(){
         $("resSave").textContent = "Score recorded in the Google Sheet.";
       }).catch(function(){
-        $(p"resSave").textContent = "Could not reach the Google Sheet. Your result is shown on this page.";
+        $("resSave").textContent = "Could not reach the Google Sheet. Your result is shown on this page.";
       });
     } catch(e){
       $("resSave").textContent = "Could not save score. Your result is shown on this page.";
