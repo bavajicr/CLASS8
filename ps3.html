@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Particulate Nature of Matter - Class 8 Semester 1 Quiz</title>
+<style>
+:root{--bg:#0b1e3f;--card:#132c57;--accent:#2f6fd6;--text:#f1f5ff;--muted:#a9bde0;--green:#1f9d55;--red:#d64545;--gold:#f5b942;--line:#33508a}
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--text);min-height:100vh}
+.wrap{max-width:720px;margin:0 auto;padding:12px}
+.credit{font-size:13px;text-align:center;color:var(--gold);padding:8px 6px;line-height:1.5}
+.screen{display:none}
+.screen.active{display:block}
+.panel{background:var(--card);border-radius:14px;padding:18px;margin-bottom:14px}
+h1{font-size:22px;margin:4px 0 6px;line-height:1.3}
+h2{font-size:18px;margin:10px 0 6px}
+.muted{color:var(--muted);font-size:14px;line-height:1.5}
+label{display:block;font-size:14px;color:var(--muted);margin-top:10px}
+input{width:100%;font-size:16px;padding:12px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--text);margin-top:6px}
+.err{color:#ff8a8a;font-size:14px;min-height:20px;margin-top:6px}
+button{min-height:46px;padding:10px 18px;border:none;border-radius:10px;background:var(--accent);color:#fff;font-size:16px;font-weight:600;cursor:pointer;font-family:inherit}
+button:disabled{opacity:.4;cursor:not-allowed}
+.btn-sec{background:#34507f}
+.btn-submit{background:var(--green)}
+.btn-test{display:block;width:100%;text-align:left;margin:10px 0;background:#1b3b70}
+.btn-test small{display:block;font-weight:400;color:var(--muted);font-size:13px;margin-top:4px;line-height:1.4}
+.topbar{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:10px}
+.pills{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.pill{background:#22407a;padding:8px 12px;border-radius:999px;font-size:15px;font-weight:600}
+.timer{width:58px;height:58px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;background:#22407a;font-size:18px;flex-shrink:0}
+.timer.low{background:var(--red)}
+.progress{height:8px;background:#22407a;border-radius:6px;overflow:hidden;margin-bottom:12px}
+.progress>div{height:100%;background:var(--accent);width:0;transition:width .3s}
+.qcard{background:var(--card);border-radius:16px;padding:18px}
+.qhead{display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:14px;margin-bottom:6px}
+.qtopic{font-size:13px;color:var(--gold);margin-bottom:6px;line-height:1.4}
+.qtext{font-size:18px;line-height:1.5;margin:8px 0 12px}
+.opt{display:block;width:100%;text-align:left;background:var(--bg);border:2px solid var(--line);color:var(--text);margin:8px 0;font-weight:500;line-height:1.4}
+.opt.correct{background:var(--green);border-color:var(--green)}
+.opt.wrong{background:var(--red);border-color:var(--red)}
+.opt.locked{cursor:default}
+.feedback{min-height:24px;font-weight:600;margin-top:6px;font-size:15px}
+.nav{display:flex;justify-content:space-between;gap:10px;margin-top:12px}
+.nav button{flex:1}
+.cardcredit{font-size:12px;color:var(--gold);text-align:center;margin-top:12px;line-height:1.5}
+.resp{background:var(--card);border-radius:12px;padding:14px;margin-bottom:10px}
+.resp .qnum{font-size:13px;color:var(--muted)}
+.resp .qtext{font-size:16px;margin:6px 0 8px}
+.ro{padding:8px 10px;border-radius:8px;margin:5px 0;font-size:15px;background:var(--bg)}
+.ro.correct{background:var(--green);color:#fff;font-weight:600}
+.ro.wrong{background:var(--red);color:#fff;font-weight:600}
+.status{font-size:14px;margin:6px 0;color:var(--muted)}
+.big{font-size:40px;font-weight:800;text-align:center;margin:8px 0}
+@media (max-width:480px){
+  .panel,.qcard{padding:14px}
+  .qtext{font-size:16px}
+  .nav{flex-direction:column}
+  .timer{width:50px;height:50px;font-size:16px}
+  button{min-height:46px}
+  .pill{font-size:14px;padding:7px 10px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="credit">C. RASOOL BAVAJI, S.A.(P.S.), ZPHS, MADANAPALLE<br>ANNAMAYYA DISTRICT &middot; tenthquiz.blogspot.com</div>
+
+  <!-- START / REGISTRATION SCREEN -->
+  <div id="screenStart" class="screen active">
+    <div class="panel">
+      <h1>Particulate Nature of Matter</h1>
+      <div class="muted">Class 8 &middot; Physical Science &middot; Semester 1 &middot; Andhra Pradesh New Syllabus<br>3 tests &middot; 20 questions each &middot; 30 seconds per question</div>
+    </div>
+    <div class="panel">
+      <h2>Registration (mandatory)</h2>
+      <label for="stName">Student name</label>
+      <input id="stName" type="text" autocomplete="name" maxlength="60" placeholder="Enter your full name">
+      <label for="stDistrict">District</label>
+      <input id="stDistrict" type="text" maxlength="60" placeholder="Enter your district">
+      <div id="regErr" class="err"></div>
+      <h2>Choose a test</h2>
+      <div id="testMenu"></div>
+    </div>
+    <div class="credit">C. RASOOL BAVAJI, S.A.(P.S.), ZPHS, MADANAPALLE &middot; ANNAMAYYA DISTRICT</div>
+  </div>
+
+  <!-- QUIZ SCREEN -->
+  <div id="screenQuiz" class="screen">
+    <div class="credit">C. RASOOL BAVAJI, S.A.(P.S.), ZPHS, MADANAPALLE &middot; ANNAMAYYA DISTRICT</div>
+    <div class="topbar">
+      <div class="pills">
+        <span class="pill" id="qPill">Q 1 / 20</span>
+        <span class="pill" id="scorePill">Score: 0</span>
+      </div>
+      <button id="btnSubmitTop" class="btn-submit">Submit</button>
+    </div>
+    <div class="progress"><div id="progBar"></div></div>
+    <div class="qcard">
+      <div class="qhead">
+        <span id="qTopicLabel"></span>
+        <div id="timerCircle" class="timer">30</div>
+      </div>
+      <div class="qtopic" id="qTopic"></div>
+      <div class="qtext" id="qText"></div>
+      <div id="qOptions"></div>
+      <div class="feedback" id="feedback"></div>
+      <div class="nav">
+        <button id="btnPrev" class="btn-sec">Previous</button>
+        <button id="btnNext">Next</button>
+      </div>
+      <div class="cardcredit">C. RASOOL BAVAJI, S.A.(P.S.), ZPHS, MADANAPALLE &middot; ANNAMAYYA DISTRICT<br>tenthquiz.blogspot.com</div>
+    </div>
+    <div class="status" id="status"></div>
+  </div>
+
+  <!-- RESULT SCREEN -->
+  <div id="screenResult" class="screen">
+    <div class="credit">C. RASOOL BAVAJI, S.A.(P.S.), ZPHS, MADANAPALLE &middot; ANNAMAYYA DISTRICT</div>
+    <div class="panel">
+      <h1 id="resTitle"></h1>
+      <div class="big" id="resScore"></div>
+      <div class="muted" id="resStats"></div>
+      <div class="status" id="resSave"></div>
+      <div class="nav">
+        <button id="btnBackMenu" class="btn-sec">Back to tests</button>
+      </div>
+    </div>
+    <h2>All responses</h2>
+    <div id="resList"></div>
+    <div class="nav">
+      <button id="btnBackMenu2" class="btn-sec">Back to tests</button>
+    </div>
+    <div class="cardcredit">C. RASOOL BAVAJI, S.A.(P.S.), ZPHS, MADANAPALLE &middot; ANNAMAYYA DISTRICT<br>tenthquiz.blogspot.com</div>
+  </div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  // ==== CONFIG: paste your Google Apps Script Web App URL here (see Code.gs) ====
+  var SCRIPT_URL = "__SCRIPT_URL__";
+  var TIME_PER_Q = 30;
+  var NQ = 20;
+
+  // ==== QUESTION BANK: 3 tests x 20 questions. Index of correct option: 0=A 1=B 2=C 3=D ====
+  var TESTS = [
+    {
+      id: "PM_CLASS8_SEM1_T01",
+      name: "Test 1",
+      topics: "Matter is made of particles; Size of particles; Spaces between particles; Motion of particles; Diffusion",
+      qs: [
+        {q:"Matter is made up of:", o:["Continuous blocks","Tiny particles","Only atoms of gold","Waves"], a:1, t:"Matter is made of particles"},
+        {q:"A drop of ink coloured a whole bucket of water. This shows that:", o:["Particles of matter are very small","Water is heavy","Ink is a solid","Water has no particles"], a:0, t:"Size of particles"},
+        {q:"50 mL of water mixed with 50 mL of alcohol gives less than 100 mL. This shows that:", o:["Particles have spaces between them","Particles are heavy","Alcohol is a gas","Water is compressible"], a:0, t:"Spaces between particles"},
+        {q:"Particles of matter are always:", o:["At rest","In continuous motion","Fixed in one position","Bigger than atoms"], a:1, t:"Motion of particles"},
+        {q:"The spreading of particles from a region of higher concentration to a region of lower concentration is called:", o:["Evaporation","Diffusion","Sublimation","Condensation"], a:1, t:"Diffusion"},
+        {q:"In which medium does diffusion take place fastest?", o:["Solid","Liquid","Gas","All are equal"], a:2, t:"Diffusion"},
+        {q:"A crystal of potassium permanganate placed in still water slowly colours the whole water. This is an example of:", o:["Melting","Diffusion in liquids","Freezing","Boiling"], a:1, t:"Diffusion"},
+        {q:"The smell of incense spreads across a room. This happens due to:", o:["Evaporation only","Diffusion of gas particles","Melting","Compression"], a:1, t:"Diffusion"},
+        {q:"The force of attraction between particles of matter is called:", o:["Gravitational force","Intermolecular force","Magnetic force","Frictional force"], a:1, t:"Spaces between particles"},
+        {q:"In a solid, the particles are:", o:["Far apart and free to move","Closely packed with strong forces between them","Moving freely in all directions","Not attracting each other"], a:1, t:"Spaces between particles"},
+        {q:"Which substance is the most compressible?", o:["Wood","Iron","Water","Air"], a:3, t:"Spaces between particles"},
+        {q:"Gases can be compressed easily because:", o:["Their particles are large","There are large spaces between their particles","Their particles do not move","Their particles are heavy"], a:1, t:"Spaces between particles"},
+        {q:"Liquids are:", o:["Easily compressible","Almost incompressible","Without any volume","Always gases"], a:1, t:"Spaces between particles"},
+        {q:"Sugar dissolves in water because:", o:["Water particles convert sugar into water","Sugar particles move into the spaces between water particles","Heat is produced","Sugar is destroyed"], a:1, t:"Diffusion"},
+        {q:"Arrange the states in increasing order of spacing between particles:", o:["Solid < Liquid < Gas","Gas < Liquid < Solid","Liquid < Solid < Gas","Solid < Gas < Liquid"], a:0, t:"Spaces between particles"},
+        {q:"The property of matter that depends on spaces between particles is:", o:["Hardness","Colour","Compressibility","Taste"], a:2, t:"Spaces between particles"},
+        {q:"Particles of matter have:", o:["Mass","No size","No motion","No spaces"], a:0, t:"Matter is made of particles"},
+        {q:"A perfume opened in one corner of a classroom is smelt in the other corner. This shows that particles are:", o:["At rest","In continuous motion","Not attracting each other","Fixed"], a:1, t:"Motion of particles"},
+        {q:"Diffusion is faster in gases than in liquids because gas particles:", o:["Are closer together","Move faster and have more space","Are heavier","Are fixed"], a:1, t:"Diffusion"},
+        {q:"Which statement about particles of matter is NOT correct?", o:["They are very small","They have spaces between them","They are always at rest","They attract each other"], a:2, t:"Motion of particles"}
+      ]
+    },
+    {
+      id: "PM_CLASS8_SEM1_T02",
+      name: "Test 2",
+      topics: "Properties of solids, liquids and gases; Shape and volume; Intermolecular forces; Compressibility; Effect of heating on particles and expansion",
+      qs: [
+        {q:"A solid has:", o:["Definite shape and definite volume","No shape and no volume","Definite volume but no shape","Definite shape but no volume"], a:0, t:"Properties of solids, liquids and gases"},
+        {q:"A liquid has:", o:["Definite shape and definite volume","No definite shape but definite volume","No shape and no volume","Definite shape but no volume"], a:1, t:"Properties of solids, liquids and gases"},
+        {q:"A gas has:", o:["Definite shape and definite volume","No definite shape and no definite volume","Definite volume only","Definite shape only"], a:1, t:"Properties of solids, liquids and gases"},
+        {q:"Which state of matter has the strongest intermolecular forces?", o:["Gas","Liquid","Solid","Vapour"], a:2, t:"Intermolecular forces"},
+        {q:"Which state of matter has the weakest intermolecular forces?", o:["Solid","Liquid","Gas","All are equal"], a:2, t:"Intermolecular forces"},
+        {q:"A solid cannot be compressed easily because its particles are:", o:["Far apart","Closely packed","Fixed to the container","Very big"], a:1, t:"Compressibility"},
+        {q:"A liquid takes the shape of the container because its particles:", o:["Are fixed in position","Can move past one another","Are very big","Do not attract each other"], a:1, t:"Properties of solids, liquids and gases"},
+        {q:"A gas fills the whole container because its particles:", o:["Are at rest","Move freely and spread out","Are heavy","Stick to each other"], a:1, t:"Properties of solids, liquids and gases"},
+        {q:"Arrange the states in increasing order of freedom of motion of particles:", o:["Solid < Liquid < Gas","Gas < Liquid < Solid","Liquid < Gas < Solid","Solid < Gas < Liquid"], a:0, t:"Intermolecular forces"},
+        {q:"Which property is shown by liquids but not by solids?", o:["Definite shape","Flow","Definite volume","Rigidity"], a:1, t:"Properties of solids, liquids and gases"},
+        {q:"Which state of matter is the easiest to compress?", o:["Solid","Liquid","Gas","Metal"], a:2, t:"Compressibility"},
+        {q:"Solids expand on heating because their particles:", o:["Shrink","Vibrate more and occupy more space","Are destroyed","Stop moving"], a:1, t:"Effect of heating and expansion"},
+        {q:"Gaps are left between railway tracks because metals:", o:["Are costly to use fully","Expand on heating","Contract on heating","Look better with gaps"], a:1, t:"Effect of heating and expansion"},
+        {q:"Water drops on a leaf join together to form a bigger drop. This shows:", o:["Particles of liquid attract each other","Particles of liquid repel each other","Liquids have no particles","Liquids are compressible"], a:0, t:"Intermolecular forces"},
+        {q:"Which of the following is a gas at room temperature?", o:["Oxygen","Ice","Iron","Wood"], a:0, t:"Properties of solids, liquids and gases"},
+        {q:"Which of the following is a liquid at room temperature?", o:["Water","Iron","Oxygen","Carbon dioxide"], a:0, t:"Properties of solids, liquids and gases"},
+        {q:"A mercury thermometer works because mercury:", o:["Shrinks on heating","Expands on heating","Turns into gas on heating","Does not change on heating"], a:1, t:"Effect of heating and expansion"},
+        {q:"Which property is common to liquids and gases?", o:["Definite shape","Ability to flow","Rigidity","Definite volume"], a:1, t:"Properties of solids, liquids and gases"},
+        {q:"Diffusion is slowest in:", o:["Gases","Liquids","Solids","Vacuum"], a:2, t:"Intermolecular forces"},
+        {q:"Which change increases the speed of the particles of matter?", o:["Cooling","Heating","Freezing","Condensing"], a:1, t:"Effect of heating and expansion"}
+      ]
+    },
+    {
+      id: "PM_CLASS8_SEM1_T03",
+      name: "Test 3",
+      topics: "Change of state: melting, freezing, boiling, condensation, sublimation; Evaporation and its factors; Melting and boiling points; Brownian motion",
+      qs: [
+        {q:"The change of a solid into a liquid is called:", o:["Freezing","Melting","Condensation","Sublimation"], a:1, t:"Change of state: melting, freezing, boiling, condensation, sublimation"},
+        {q:"The change of a liquid into a gas at its boiling point is called:", o:["Evaporation only","Boiling","Sublimation","Melting"], a:1, t:"Change of state: melting, freezing, boiling, condensation, sublimation"},
+        {q:"The change of a gas into a liquid is called:", o:["Condensation","Evaporation","Melting","Sublimation"], a:0, t:"Change of state: melting, freezing, boiling, condensation, sublimation"},
+        {q:"The change of a solid directly into a gas is called:", o:["Sublimation","Condensation","Melting","Freezing"], a:0, t:"Change of state: melting, freezing, boiling, condensation, sublimation"},
+        {q:"An example of sublimation is:", o:["Ice melting in a glass","Camphor disappearing when kept open","Water boiling in a vessel","Dew forming on grass"], a:1, t:"Change of state: melting, freezing, boiling, condensation, sublimation"},
+        {q:"Evaporation takes place:", o:["Only at the boiling point","From the surface of a liquid at all temperatures","Only in solids","Only when heated to 100 degrees C"], a:1, t:"Evaporation and its factors"},
+        {q:"Which factor does NOT increase the rate of evaporation?", o:["Increase in temperature","Increase in surface area","Increase in wind speed","Increase in humidity"], a:3, t:"Evaporation and its factors"},
+        {q:"Evaporation causes cooling because:", o:["Particles gain heat","The fastest particles leave the surface, taking energy with them","Particles stop moving","Particles become heavy"], a:1, t:"Evaporation and its factors"},
+        {q:"Wet clothes dry faster in summer than in winter because:", o:["Higher temperature increases evaporation","Clothes become heavier","Air is colder","Wind stops blowing"], a:0, t:"Evaporation and its factors"},
+        {q:"Freezing is the change of:", o:["Liquid to solid","Solid to liquid","Gas to liquid","Liquid to gas"], a:0, t:"Change of state: melting, freezing, boiling, condensation, sublimation"},
+        {q:"The boiling point of water at normal atmospheric pressure is:", o:["0 degrees C","50 degrees C","100 degrees C","273 degrees C"], a:2, t:"Melting and boiling points"},
+        {q:"The melting point of ice is:", o:["100 degrees C","0 degrees C","37 degrees C","4 degrees C"], a:1, t:"Melting and boiling points"},
+        {q:"Brownian motion is:", o:["Random zig-zag motion of tiny particles suspended in a fluid","Motion of gas inside a balloon","Motion of planets around the Sun","Motion of bubbles in boiling water"], a:0, t:"Brownian motion"},
+        {q:"Brownian motion is caused by:", o:["Gravity","Collisions of fluid particles with the suspended particles","Magnetism","Sound waves"], a:1, t:"Brownian motion"},
+        {q:"Which change absorbs heat from the surroundings?", o:["Freezing","Condensation","Melting","Solidification"], a:2, t:"Change of state: melting, freezing, boiling, condensation, sublimation"},
+        {q:"Dew drops formed on grass in the morning are an example of:", o:["Evaporation","Condensation","Sublimation","Melting"], a:1, t:"Change of state: melting, freezing, boiling, condensation, sublimation"},
+        {q:"Naphthalene balls kept in a cupboard slowly disappear. This is an example of:", o:["Sublimation","Freezing","Condensation","Melting"], a:0, t:"Change of state: melting, freezing, boiling, condensation, sublimation"},
+        {q:"Which solid can sublime?", o:["Iodine","Water","Iron","Sand"], a:0, t:"Change of state: melting, freezing, boiling, condensation, sublimation"},
+        {q:"When ice melts, the change is from:", o:["Solid to liquid","Liquid to gas","Gas to liquid","Liquid to solid"], a:0, t:"Melting and boiling points"},
+        {q:"Which change of state needs heat to be removed from the substance?", o:["Melting","Boiling","Freezing","Evaporation"], a:2, t:"Change of state: melting, freezing, boiling, condensation, sublimation"}
+      ]
+    }
+  ];
+
+  // ==== STATE ====
+  var S = null;        // current attempt
+  var timerId = null;
+  var left = TIME_PER_Q;
+  var startedAt = 0;
+
+  function $(id){ return document.getElementById(id); }
+  function show(id){
+    ["screenStart","screenQuiz","screenResult"].forEach(function(s){
+      $(s).classList.toggle("active", s === id);
+    });
+    window.scrollTo(0,0);
+  }
+
+  // ==== REGISTRATION + MENU ====
+  function buildMenu(){
+    var box = $("testMenu");
+    box.innerHTML = "";
+    TESTS.forEach(function(t, i){
+      var b = document.createElement("button");
+      b.className = "btn-test";
+      b.type = "button";
+      b.innerHTML = t.name + " (20 questions)<small>Topics: " + t.topics + "</small>";
+      b.addEventListener("click", function(){ startTest(i); });
+      box.appendChild(b);
+    });
+  }
+
+  function getReg(){
+    var name = $("stName").value.trim();
+    var district = $("stDistrict").value.trim();
+    if (!name || !district){
+      $("regErr").textContent = "Please enter both your name and district to start.";
+      return null;
+    }
+    $("regErr").textContent = "";
+    return {name:name, district:district};
+  }
+
+  // Fisher-Yates shuffle
+  function shuffleArr(arr){
+    var a = arr.slice();
+    for (var i = a.length - 1; i > 0; i--){
+      var j = Math.floor(Math.random() * (i + 1));
+      var tmp = a[i]; a[i] = a[j]; a[j] = tmp;
+    }
+    return a;
+  }
+
+  // New question order and option order for every attempt; correct index remapped
+  function shuffledTest(T){
+    var qs = shuffleArr(T.qs).map(function(Q){
+      var order = shuffleArr([0,1,2,3]);
+      return {
+        q: Q.q,
+        t: Q.t,
+        o: order.map(function(k){ return Q.o[k]; }),
+        a: order.indexOf(Q.a)
+      };
+    });
+    return {id: T.id, name: T.name, topics: T.topics, qs: qs};
+  }
+
+  function startTest(idx){
+    var reg = getReg();
+    if (!reg) { $("stName").scrollIntoView(); return; }
+    var T = shuffledTest(TESTS[idx]);
+    S = {
+      idx: idx, test: T, name: reg.name, district: reg.district,
+      cur: 0, ans: new Array(NQ).fill(null), timedOut: new Array(NQ).fill(false),
+      done: false
+    };
+    startedAt = Date.now();
+    show("screenQuiz");
+    render();
+  }
+
+  // ==== QUESTION RENDER ====
+  function answeredCount(){
+    var n = 0;
+    for (var i=0;i<NQ;i++){ if (S.ans[i] !== null) n++; }
+    return n;
+  }
+  function score(){
+    var c = 0;
+    for (var i=0;i<NQ;i++){ if (S.ans[i] === S.test.qs[i].a) c++; }
+    return c;
+  }
+
+  function render(){
+    var i = S.cur;
+    var Q = S.test.qs[i];
+    var answered = S.ans[i] !== null;
+
+    $("qPill").textContent = "Q " + (i+1) + " / " + NQ;
+    $("scorePill").textContent = "Score: " + score();
+    $("progBar").style.width = ((answeredCount()/NQ)*100) + "%";
+    $("qTopicLabel").textContent = S.test.name + " · Q." + (i+1);
+    $("qTopic").textContent = "Topic: " + Q.t;
+    $("qText").textContent = (i+1) + ". " + Q.q;
+
+    var box = $("qOptions");
+    box.innerHTML = "";
+    var letters = ["A","B","C","D"];
+    Q.o.forEach(function(opt, k){
+      var b = document.createElement("button");
+      b.type = "button";
+      b.className = "opt" + (answered ? " locked" : "");
+      b.textContent = letters[k] + ")  " + opt;
+      if (answered){
+        if (k === Q.a) b.classList.add("correct");
+        else if (k === S.ans[i]) b.classList.add("wrong");
+      }
+      b.addEventListener("click", function(){ choose(k); });
+      box.appendChild(b);
+    });
+
+    var fb = "";
+    if (answered){
+      fb = (S.ans[i] === Q.a) ? "Correct!" : "Wrong. Correct answer is " + letters[Q.a] + ")";
+      $("feedback").style.color = (S.ans[i] === Q.a) ? "#7ee2a0" : "#ff8a8a";
+    } else if (S.timedOut[i]){
+      fb = "Time over for this question.";
+      $("feedback").style.color = "#a9bde0";
+    } else {
+      $("feedback").style.color = "#a9bde0";
+    }
+    $("feedback").textContent = fb;
+
+    $("btnPrev").disabled = (i === 0);
+    $("btnNext").disabled = !answered && i === NQ-1;
+    $("btnNext").textContent = (i === NQ-1) ? "Finish" : "Next";
+    $("btnNext").disabled = !answered && !(S.timedOut[i]);
+    if (i === NQ-1 && answered) $("btnNext").disabled = false;
+
+    $("status").textContent = "Answered: " + answeredCount() + " of " + NQ + "  ·  " + S.name + " · " + S.district;
+
+    if (answered){ stopTimer(); $("timerCircle").textContent = "--"; $("timerCircle").classList.remove("low"); }
+    else { startTimer(); }
+  }
+
+  function choose(k){
+    var i = S.cur;
+    if (S.done || S.ans[i] !== null) return;
+    S.ans[i] = k;
+    stopTimer();
+    render();
+  }
+
+  // ==== TIMER (30 s per question) ====
+  function startTimer(){
+    stopTimer();
+    left = TIME_PER_Q;
+    updateTimerView();
+    timerId = setInterval(function(){
+      left--;
+      updateTimerView();
+      if (left <= 0){
+        stopTimer();
+        timeUp();
+      }
+    }, 1000);
+  }
+  function stopTimer(){
+    if (timerId){ clearInterval(timerId); timerId = null; }
+  }
+  function updateTimerView(){
+    var t = $("timerCircle");
+    t.textContent = left;
+    t.classList.toggle("low", left <= 10);
+  }
+  function timeUp(){
+    if (S.done) return;
+    var i = S.cur;
+    if (S.ans[i] !== null) return;
+    S.timedOut[i] = true;
+    if (i < NQ-1){
+      // No answer shown; move on automatically
+      S.cur = i + 1;
+      render();
+    } else {
+      $("timerCircle").textContent = "0";
+      $("feedback").textContent = "Time over. Press Submit to see your result.";
+      $("feedback").style.color = "#a9bde0";
+    }
+  }
+
+  // ==== NAVIGATION ====
+  $("btnNext").addEventListener("click", function(){
+    if (S.cur < NQ-1){ S.cur++; render(); }
+    else { finish(); }
+  });
+  $("btnPrev").addEventListener("click", function(){
+    if (S.cur > 0){ S.cur--; render(); }
+  });
+  $("btnSubmitTop").addEventListener("click", function(){
+    if (!S || S.done) return;
+    var n = answeredCount();
+    var msg = "Submit the test now? Answered: " + n + " of " + NQ + ".";
+    if (window.confirm(msg)) finish();
+  });
+
+  // ==== FINISH + RESULTS ====
+  function finish(){
+    if (S.done) return;
+    S.done = true;
+    stopTimer();
+    var total = NQ;
+    var sc = score();
+    var pct = Math.round((sc/total)*100);
+    var secs = Math.round((Date.now() - startedAt)/1000);
+
+    $("resTitle").textContent = S.test.name + " — Result";
+    $("resScore").textContent = sc + " / " + total + "  (" + pct + "%)";
+    $("resStats").textContent =
+      "Name: " + S.name + "  ·  District: " + S.district +
+      "  ·  Correct: " + sc + "  ·  Wrong: " + (answeredCount()-sc) +
+      "  ·  Not answered: " + (total-answeredCount()) +
+      "  ·  Time: " + Math.floor(secs/60) + " min " + (secs%60) + " s";
+
+    var list = $("resList");
+    list.innerHTML = "";
+    var letters = ["A","B","C","D"];
+    S.test.qs.forEach(function(Q, i){
+      var card = document.createElement("div");
+      card.className = "resp";
+      var chosen = S.ans[i];
+      var youTxt = (chosen === null) ? "Not answered" : (letters[chosen] + ") " + Q.o[chosen]);
+      var mark = (chosen === null) ? "" : (chosen === Q.a ? " ✔" : " ✘");
+      var html = '<div class="qnum">Q.' + (i+1) + ' &middot; ' + Q.t + '</div>';
+      html += '<div class="qtext"></div>';
+      card.innerHTML = html;
+      card.querySelector(".qtext").textContent = Q.q;
+      Q.o.forEach(function(opt, k){
+        var d = document.createElement("div");
+        d.className = "ro";
+        if (k === Q.a) d.classList.add("correct");
+        else if (k === chosen) d.classList.add("wrong");
+        d.textContent = letters[k] + ") " + opt + (k === Q.a ? "  (correct)" : "") + (k === chosen && k !== Q.a ? "  (your answer)" : "");
+        card.appendChild(d);
+      });
+      var yr = document.createElement("div");
+      yr.className = "status";
+      yr.textContent = "Your response: " + youTxt + mark;
+      card.appendChild(yr);
+      list.appendChild(card);
+    });
+
+    postScore(sc, total, pct, secs);
+    show("screenResult");
+  }
+
+  function postScore(sc, total, pct, secs){
+    if (!SCRIPT_URL || SCRIPT_URL.indexOf("__SCRIPT_URL__") !== -1){
+      $("resSave").textContent = "Score tracking not connected yet (Google Sheet URL not set).";
+      return;
+    }
+    var payload = {
+      name: S.name, district: S.district, test: S.test.id,
+      score: sc, total: total, percent: pct, timeTaken: secs,
+      timestamp: new Date().toISOString()
+    };
+    $("resSave").textContent = "Saving score to Google Sheet...";
+    try {
+      fetch(SCRIPT_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: {"Content-Type": "text/plain;charset=utf-8"},
+        body: JSON.stringify(payload)
+      }).then(function(){
+        $("resSave").textContent = "Score recorded in the Google Sheet.";
+      }).catch(function(){
+        $(p"resSave").textContent = "Could not reach the Google Sheet. Your result is shown on this page.";
+      });
+    } catch(e){
+      $("resSave").textContent = "Could not save score. Your result is shown on this page.";
+    }
+  }
+
+  $("btnBackMenu").addEventListener("click", backToMenu);
+  $("btnBackMenu2").addEventListener("click", backToMenu);
+  function backToMenu(){
+    stopTimer();
+    S = null;
+    show("screenStart");
+  }
+
+  buildMenu();
+})();
+</script>
+</body>
+</html>
