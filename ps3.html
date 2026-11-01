@@ -3,6 +3,40 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<script>
+  // 1. Block right-click context menu
+  document.addEventListener('contextmenu', e => e.preventDefault());
+
+  // 2. Prevent key combinations (Copy, Print, Save, DevTools)
+  document.addEventListener('keydown', e => {
+    if (
+      (e.ctrlKey || e.metaKey) && 
+      (e.key === 'c' || e.key === 'u' || e.key === 'p' || e.key === 's')
+    ) {
+      e.preventDefault();
+    }
+    if (e.key === 'F12' || ((e.ctrlKey || e.metaKey) && e.shiftKey && e.key === 'I')) {
+      e.preventDefault();
+    }
+  });
+
+  // 3. Detect when student switches tabs or minimizes the browser
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) {
+      alert("Warning: Switching tabs during the test is monitored!");
+    }
+  });
+</script>
+
+<style>
+  /* Prevent text selection across the page */
+  body {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+</style>
 <title>Particulate Nature of Matter - Class 8 Semester 1 Quiz</title>
 <style>
 :root{--bg:#0b1e3f;--card:#132c57;--accent:#2f6fd6;--text:#f1f5ff;--muted:#a9bde0;--green:#1f9d55;--red:#d64545;--gold:#f5b942;--line:#33508a}
